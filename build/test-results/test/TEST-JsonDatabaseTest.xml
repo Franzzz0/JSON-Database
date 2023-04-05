@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-05T15:11:47" hostname="DESKTOP-18HC525" time="0.817">
+  <properties/>
+  <testcase name="start" classname="JsonDatabaseTest" time="0.817"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Client started!
+Sent: {"type":exit}
+Received: {"response":"OK"}
+?[1;31m
+Start test 2?[0m
+?[1;31m
+Start test 3?[0m
+Server started!
+Client started!
+Received: {"type":set,"key":"1","value":"Hello world!"}
+Sent: {"type":set,"key":"1","value":"Hello world!"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Received: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+
+Sent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Received: {"type":"get","key":["person","name"]}
+
+Sent: {"type":"get","key":["person","name"]}
+
+Sent: {"response":"OK","value":"Elon Musk"}
+Received: {"response":"OK","value":"Elon Musk"}
+Client started!
+Received: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+
+Sent: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Received: {"type":"get","key":["person"]}
+
+Sent: {"type":"get","key":["person"]}
+
+Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Received: {"type":"delete","key":["person","car","year"]}
+
+Sent: {"type":"delete","key":["person","car","year"]}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Received: {"type":"get","key":["person"]}
+
+Sent: {"type":"get","key":["person"]}
+
+Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Received: {"type":exit}
+Sent: {"type":exit}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

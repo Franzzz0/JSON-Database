@@ -1,0 +1,62 @@
+[1;31m
+Start test 1[0m
+Client started!
+Sent: {"type":exit}
+Received: {"response":"OK"}
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+Server started!
+Client started!
+9Received: {"type":set,"key":"1","value":"Hello world!"}
+5Sent: {"type":set,"key":"1","value":"Hello world!"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+¢Received: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+
+žSent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+2Received: {"type":"get","key":["person","name"]}
+
+.Sent: {"type":"get","key":["person","name"]}
+
+-Sent: {"response":"OK","value":"Elon Musk"}
+1Received: {"response":"OK","value":"Elon Musk"}
+Client started!
+LReceived: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+
+HSent: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
++Received: {"type":"get","key":["person"]}
+
+'Sent: {"type":"get","key":["person"]}
+
+’Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+–Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+;Received: {"type":"delete","key":["person","car","year"]}
+
+7Sent: {"type":"delete","key":["person","car","year"]}
+
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
++Received: {"type":"get","key":["person"]}
+
+'Sent: {"type":"get","key":["person"]}
+
+„Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+ˆReceived: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Received: {"type":exit}
+Sent: {"type":exit}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
